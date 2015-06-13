@@ -37,12 +37,10 @@
 			  <div class='form-group'>
 				  <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'> in </label>
 				  
-				   <select class="form-control" name='request[state]' style='text-align:center'>
-				   	<option value='select' selected></option>
-			  	 	<% @states.each do |state| %>
-					  <option value='<%= state %>'><%= state %>.</option>
-					<% end %> 
-				  </select>
+				  
+
+				  <%= select_tag :state, options_for_select(us_states), name:'request[state]',
+				  class:'form-control',style:'text-align:center'  %>
 			  </div>
 		</div>
 	</div>
