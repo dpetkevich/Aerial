@@ -1,0 +1,27 @@
+
+
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: aerial_dev_db
+  port: 5433
+  password: harvey
+  username: postgres
+
+test:
+  <<: *default
+  database: aerial_test_db
+  port: 5433
+  password: harvey
+  username: postgres
+
+production:
+  <<: *default
+  database: aerial_prod_db
+  port: 5433
+  password: harvey
+  username: postgres

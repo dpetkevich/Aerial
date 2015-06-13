@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  website: MyString
+  description: MyString
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  quality_guarantee: false
+  faa_approved: false
+  enhanced: false
+
+two:
+  name: MyString
+  website: MyString
+  description: MyString
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  quality_guarantee: false
+  faa_approved: false
+  enhanced: false

@@ -1,0 +1,53 @@
+<div class='container-fluid' >
+	<div class='row text-center' >
+	      <div class='col-lg-12' >
+	         <h2 style='color:white	;font-weight:300;margin-bottom:5px;color:#2C3E50'>Aerial</h2>
+	          <p style='color:white;color:#2C3E50' class='thin'>A directory of professional drone aerial photography services</p>
+	      </div>
+	</div>
+
+
+	<%= form_tag({controller: "listings", action: "index"}, method:'get', class:"form-inline") do %>
+	<div class='row text-center' style='margin-top:20px' >
+		<div class='col-lg-12' >
+			  <div class="form-group">
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>Find an aerial photographer in</label>
+			  	 <select class="form-control" name='state' style='text-align:center'>
+			  	 	<% @states.each do |state| %>
+					  <option value='<%= state %>'><%= state %></option>
+					<% end %> 
+				  </select>
+			  </div>
+			  <div class='form-group'>
+				  <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>specializing in </label>
+				  <select class="form-control" name='tag' style='text-align:center'>
+					  <option value='Agriculture'>Agriculture</option>
+					  <option value='Construction'>Construction</option>
+					  <option value='Events'>Events</option>
+					  <option value='Land Surveying'>Land Surveying</option>
+					  <option value='Movies/Ads'>Movies/Ads</option>
+					  <option value='RealEstate'>Real Estate</option>
+					  <option value='Structural Inspection'>Structural Inspection</option>
+				  </select>
+			  </div>
+		</div>
+	<% end %>
+
+	
+
+
+	<div class='row text-center' style='margin-top:20px	' >
+		<div class='col-lg-12' >
+			<button type="submit" class="btn btn-primary" style='background-color:#2980B9'>Search</button>
+		</div>
+	</div>
+
+	</form>
+
+
+
+		<footer class='footer text-center' style='position: absolute; bottom: 0; width: 100%;background-color:#ECF0F1'>
+			<%= image_tag('flag.png', style:'width:30px') %>
+			<p style='color:#2C3E50;font-size:10px'>American Made</p>
+		</footer>
+</div>

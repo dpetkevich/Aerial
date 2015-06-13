@@ -1,0 +1,227 @@
+<div class='container-fluid' style='background-color:#ECF0F1' >
+  <div class='panel panel-default'>
+    <div class='panel-body'>
+      <div class='row' >
+        <div class='col-lg-12'>
+          <ul class='list-inline' style='margin-bottom:0px;'>
+            <li class='pull-left'>
+              <a href='javascript:history.back()'><h6 style='font-weight:700;font-size:16px;color:#2980B9'><span class="fui-arrow-left"></span>Back</h6></a>
+            </li>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='panel panel-default' >
+      <div class='panel-body'>
+        <div class='row' >
+          <div class='col-xs-12'>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <ul class="list-inline" style='margin-bottom:0px'>
+                  <li>
+                    <h6 style='font-weight:700;font-size:16px;margin-bottom:0px'><%= @listing.name %></h6>
+                  </li>
+                  <li>
+                    <p style='font-size:14px;margin-bottom:0px'><%= @listing.city %>, <%= @listing.state %></p>
+                  </li>
+              </div>
+              <div class='col-lg-12' style='margin-top:0px'>
+                <ul class="list-inline" style='margin-bottom:0px'>
+                  <li>
+                    <span class="fui-star" style='color:#2980B9'></span>
+                    <span class="fui-star" style='color:#2980B9'></span>
+                    <span class="fui-star" style='color:#2980B9'></span>
+                    <span class="fui-star" style='color:#2980B9'></span>
+                    <span class="fui-star" style='color:#2980B9'></span>
+                  </li>
+                  <li>
+                    <p style='font-size:14px;color:#2980B9;margin-bottom:0px'>5/5</p>
+                  </li>
+                  <li>
+                    <p style='font-size:14px;color:#2980B9;margin-bottom:0px'>3 reviews</p>
+                  </li>
+                </ul>
+              </div>
+               <div class='col-lg-12' style='margin-top:0px'>
+                <% @listing.tags.each do |tag| %>
+                <button class='tag' style='color:#2980B9;border:2px solid #2980B9;background-color:transparent'><%= tag %></button>
+                <% end %>
+              </div>
+              <div class='col-lg-12'>
+                <p style='font-size:14px;margin-top:5px'><%= @listing.description %></p>
+              </div>
+              <div class='col-lg-12' style='margin-bottom:10px'>
+                <ul class="list-inline" style='margin-bottom:0px'>
+                  <li>
+                    <button type="submit" class="btn btn-primary" style='background-color:#2980B9'>Email</button>
+                  </li>
+                  <li>
+                    <button type="submit" class="btn btn-primary" style='background-color:#2980B9'>Call</button>
+                  </li>
+                  
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='panel panel-default' style='margin-left:auto;margin-right:auto;border:0px;background-color:#ECF0F1;box-shadow:none;webkit-box-shadow:none'>
+    <div class='panel-body'>
+      <div class='row' >
+        <div class='col-lg-12'>
+          <h6 class='thin' style='color:#2C3E50;margin-top:8px;margin-bottom:8px;border:0px;font-size:16px'>Past Work</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='panel panel-default' >
+    <div class='panel-body'>
+      <div class='row' >
+        <div class='col-md-3 text-center' style='margin-top:10px;margin-bottom:10px;'>
+          <iframe style="width:100%" src="https://player.vimeo.com/video/106864772?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      
+        </div>
+        <div class='col-md-3 text-center' style='margin-top:10px;margin-bottom:10px;'>
+          <iframe style="width:100%" src="https://www.youtube.com/embed/WfhF1DBqHKw" frameborder="0" allowfullscreen></iframe>
+        </div>   
+        <div class='col-md-3 text-center' style='margin-top:10px;margin-bottom:10px;'>
+          <iframe style="width:100%" src="https://www.youtube.com/embed/0uxSM9yonEQ" frameborder="0" allowfullscreen></iframe>
+        </div> 
+        <div class='col-md-3 text-center' style='margin-top:10px;margin-bottom:10px;'>
+          <iframe style="width:100%" src="https://www.youtube.com/embed/acScCRFIFNc" frameborder="0" allowfullscreen></iframe>
+        </div>     
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+  <div class='panel panel-default' style='margin-left:auto;margin-right:auto;border:0px;background-color:#ECF0F1;box-shadow:none;webkit-box-shadow:none'>
+    <div class='panel-body'>
+      <div class='row' >
+        <div class='col-lg-12'>
+          <h6 class='thin' style='color:#2C3E50;margin-top:8px;margin-bottom:8px;border:0px;font-size:16px'>Reviews</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='panel panel-default' >
+      <div class='panel-body'>
+        <div class='row' >
+          <div class='col-xs-12'>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <ul class="list-inline" style='margin-bottom:0px'>
+                  <li>
+                    <h6 style='font-weight:700;font-size:16px;margin-bottom:0px'>Very tasteful work!</h6>
+                  </li>
+                </ul>
+              </div>
+              <div class='col-lg-12' >
+                <ul class="list-inline" style='margin-top:5px;margin-bottom:5px'>
+                  <li>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                  </li>
+                  <li>
+                    <p style='font-size:14px;margin-bottom:0px'>By John Smith</p>
+                  </li>
+                </ul>
+              </div>
+              <div class='col-lg-12'>
+                <p style='font-size:14px;margin-top:5px'>I'm continually impressed by Wild Rabbits work. Great job.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='panel panel-default' >
+      <div class='panel-body'>
+        <div class='row' >
+          <div class='col-xs-12'>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <ul class="list-inline" style='margin-bottom:0px'>
+                  <li>
+                    <h6 style='font-weight:700;font-size:16px;margin-bottom:0px'>Hire them and relax</h6>
+                  </li>
+                </ul>
+              </div>
+              <div class='col-lg-12' >
+                <ul class="list-inline" style='margin-top:5px;margin-bottom:5px'>
+                  <li>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                  </li>
+                  <li>
+                    <p style='font-size:14px;margin-bottom:0px'>By Dan Brown</p>
+                  </li>
+                </ul>
+              </div>
+              <div class='col-lg-12'>
+                <p style='font-size:14px;margin-top:5px'>Wild rabbit spent one day with me figured out what I wanted. Two weeks later it was in my hands. Incredible. </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='panel panel-default' >
+      <div class='panel-body'>
+        <div class='row' >
+          <div class='col-xs-12'>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <ul class="list-inline" style='margin-bottom:0px'>
+                  <li>
+                    <h6 style='font-weight:700;font-size:16px;margin-bottom:0px'>Really impressive drones</h6>
+                  </li>
+                </ul>
+              </div>
+              <div class='col-lg-12' >
+                <ul class="list-inline" style='margin-top:5px;margin-bottom:5px'>
+                  <li>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                    <span class="fui-star" style='color:#3498DB'></span>
+                  </li>
+                  <li>
+                    <p style='font-size:14px;margin-bottom:0px'>By Max Jacobs</p>
+                  </li>
+                </ul>
+              </div>
+              <div class='col-lg-12'>
+                <p style='font-size:14px;margin-top:5px'>These guys make their owns drones so they're just right for the job.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ 

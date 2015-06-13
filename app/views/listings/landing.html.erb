@@ -1,0 +1,162 @@
+<div class='container-fluid' >
+	<div class='row text-center' >
+	      <div class='col-lg-12' >
+	         <h2 style='color:white	;font-weight:500;margin-bottom:5px;color:#2C3E50'>Aerial</h2>
+	          <p style='color:white;color:#2C3E50;font-weight:200'>We'll find the right drone photographer for you.</div>
+	</div>
+
+	
+
+	<% if notice.nil? == false %>
+		<div class='row text-center' style='margin-top:40px;' >
+			<div class='col-lg-12' >
+				<p id="notice" style='color:#27AE60; font-size: 16px;'><%= notice %></p>
+			</div>
+		</div>
+	<% else %>
+
+
+
+	<%= form_tag({controller: "requests", action: "create"}, method:'post', class:"form-inline") do %>
+	<div class='row text-center' style='margin-top:20px' >
+		<div class='col-lg-12' >
+			  <div class="form-group">
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>I'd like a drone to image</label>
+			    <select class="form-control" name='request[tag]' style='text-align:center' id='imageryPurpose'>
+			    	  <option value='select' selected></option>
+					  <option value='Agriculture'>farmland</option>
+					  <option value='Construction'>a construction site</option>
+					  <option value='Events'>an event</option>
+					  <option value='LandSurveying'>land</option>
+					  <option value='Movies/Ads'>a movie or ad</option>
+					  <option value='RealEstate'>a home</option>
+					  <option value='StructuralInspection'>a structure (powerline, pipeline, bridge etc.)</option>
+				  </select>
+			  	
+			  </div>
+			  <div class='form-group'>
+				  <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'> in </label>
+				  
+				   <select class="form-control" name='request[state]' style='text-align:center'>
+				   	<option value='select' selected></option>
+			  	 	<% @states.each do |state| %>
+					  <option value='<%= state %>'><%= state %>.</option>
+					<% end %> 
+				  </select>
+			  </div>
+		</div>
+	</div>
+
+	<div class='row text-center detailElement' style='margin-top:20px;display:none' id='farmLandDetail'>
+		<div class='col-lg-12' >
+			  <div class="form-group">
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>
+			    	Specifically, I'd like to image</label>
+			    <input type="number" class="form-control" id="exampleInputName2" placeholder="100" style='text-align:center' name='request[farmLandAcres]'>
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>
+			    	acres, close to </label>
+			    <input type="text" class="form-control" id="exampleInputName2" placeholder="city" style='text-align:center' name='request[farmLandCity]'>
+			  </div>
+		</div>
+		
+	</div>
+
+	<div class='row text-center detailElement' style='margin-top:20px;display:none' id='eventDetail'>
+		<div class='col-lg-12' >
+			  <div class="form-group">
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>Near</label>
+			    <input type="text" class="form-control" id="exampleInputName2" placeholder="city" style='text-align:center' name='request[eventCity]'>
+			  </div>
+		</div>
+	</div>
+
+	<div class='row text-center detailElement' style='margin-top:20px;display:none' id='landDetail'>
+		<div class='col-lg-12' >
+			  <div class="form-group">
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>Near</label>
+			    <input type="text" class="form-control" id="exampleInputName2" placeholder="city" style='text-align:center' name='request[landCity]'>
+			  </div>
+		</div>
+	</div>
+
+	<div class='row text-center detailElement' style='margin-top:20px;display:none' id='constructionDetail'>
+		<div class='col-lg-12' >
+			  <div class="form-group">
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>Near</label>
+			    <input type="text" class="form-control" id="exampleInputName2" placeholder="city" style='text-align:center' name='request[constructionCity]'>
+			  </div>
+		</div>
+	</div>
+
+	<div class='row text-center detailElement' style='margin-top:20px;display:none' id='movieDetail'>
+		<div class='col-lg-12' >
+			  <div class="form-group">
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>
+			    Near</label>
+			    <input type="text" class="form-control" id="exampleInputName2" placeholder="city" style='text-align:center' name='request[movieCity]'>
+			  </div>
+		</div>
+	</div>
+
+	<div class='row text-center detailElement' style='margin-top:20px;display:none' id='realEstateDetail'>
+		<div class='col-lg-12' >
+			  <div class="form-group">
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>
+			    Near</label>
+			    <input type="text" class="form-control" id="exampleInputName2" placeholder="city" style='text-align:center' name='request[realEstateCity]'>
+			  </div>
+		</div>
+	</div>
+
+	<div class='row text-center detailElement' style='margin-top:20px;display:none' id='inspectionDetail'>
+		<div class='col-lg-12' >
+			  <div class="form-group">
+			  
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>
+			    Near</label>
+			    <input type="text" class="form-control" id="exampleInputName2" placeholder="city" style='text-align:center' name='request[inspectionCity]'>
+			  </div>
+		</div>
+	</div>
+
+	<div class='row text-center' id='priority' style='display:none'>
+		<div class='col-lg-12' style='margin-top:20px' > 
+			<div class="form-group">
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>
+			    	in the next</label>
+			     <select class="form-control" name='request[priority]' style='text-align:center' id='weeks'>
+					  <option value='1'>week.</option>
+					  <option value='2'>two weeks.</option>
+					  <option value='3'>three weeks.</option>
+					  <option value='4'>four weeks.</option>
+				  </select>
+			  </div>
+		</div>
+	</div>
+
+	<div class='row text-center' style='margin-top:20px;display:none' id='contactForm'>
+		<div class='col-lg-12' >
+			  <div class="form-group">
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>
+			    	You can reach me at</label>
+			    <input type="email" class="form-control" id="exampleInputName2" placeholder='your email.' style='text-align:center' name='request[contactEmail]'>
+			  </div>
+		</div>
+	</div>
+
+	<div class='row text-center' style='margin-top:20px	' >
+		<div class='col-lg-12' >
+			<button type="submit" class="btn btn-primary" style='background-color:#2980B9'>Submit</button>
+		</div>
+	</div>
+
+	<% end %> <!-- end form -->
+	<% end %> <!-- end if -->
+
+		<!-- <footer class='footer text-center' style='position: absolute; bottom: 0; width: 100%;background-color:#ECF0F1;'>
+			 <p style='font-size:12px' >Aerial © 2015</p>
+<!-- 			<%= image_tag('flag.png', style:'width:30px') %>
+ 		<!-- <p style='color:#2C3E50;font-size:10px'>American Made</p> 
+		</footer>  -->
+
+</div>
