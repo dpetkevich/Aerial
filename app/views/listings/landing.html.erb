@@ -18,6 +18,18 @@
 
 
 	<%= form_tag({controller: "requests", action: "create"}, method:'post', class:"form-inline") do %>
+
+
+	<div class='row text-center' style='margin-top:20px;'>
+		<div class='col-lg-12' >
+			  <div class="form-group">
+			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>
+			    	You can reach me at</label>
+			    <input type="email" class="form-control" placeholder='your email.' style='text-align:center' name='request[contactEmail]'>
+			  </div>
+		</div>
+	</div>
+
 	<div class='row text-center' style='margin-top:20px' >
 		<div class='col-lg-12' >
 			  <div class="form-group">
@@ -132,15 +144,7 @@
 		</div>
 	</div>
 
-	<div class='row text-center' style='margin-top:20px;display:none' id='contactForm'>
-		<div class='col-lg-12' >
-			  <div class="form-group">
-			    <label for="exampleInputName2" style='color:white;font-size:20px;font-weight:200;color:#2C3E50'>
-			    	You can reach me at</label>
-			    <input type="email" class="form-control" id="exampleInputName2" placeholder='your email.' style='text-align:center' name='request[contactEmail]'>
-			  </div>
-		</div>
-	</div>
+
 
 	<div class='row text-center' style='margin-top:20px	' >
 		<div class='col-lg-12' >
